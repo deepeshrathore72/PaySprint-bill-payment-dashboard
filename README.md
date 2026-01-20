@@ -1,36 +1,411 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bill Payments Module - B2B SaaS Solution
 
-## Getting Started
+A comprehensive bill payment management system designed for small businesses, featuring vendor bill tracking, approval workflows, payment processing, and financial analytics.
 
-First, run the development server:
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Key Components](#key-components)
+- [Usage Guide](#usage-guide)
+- [Assignment Details](#assignment-details)
+- [Development](#development)
+
+## 🎯 Overview
+
+This Bill Payments Module is a production-ready solution built to address the pain points of small businesses managing vendor bills, approvals, and payments. It provides a centralized hub for tracking all bills, streamlining approval workflows, and processing payments efficiently.
+
+### Problem Statement
+
+Small businesses often struggle with:
+- Manual bill tracking across scattered systems
+- Missed due dates leading to late payment penalties
+- Lack of visibility in approval processes
+- Difficult payment reconciliation
+- No insights into spending patterns
+
+### Solution
+
+A comprehensive bill payment system that offers:
+- ✅ Centralized bill management dashboard
+- ✅ Streamlined approval workflows with activity logs
+- ✅ Real-time status tracking and notifications
+- ✅ Financial insights through visual analytics
+- ✅ Complete audit trail for compliance
+
+## ✨ Features
+
+### 📊 Bills Dashboard
+- **Overview Statistics**: Visual metrics showing total, pending, overdue, and paid bills
+- **Interactive Charts**: Pie chart for status breakdown, bar chart for category spending, line chart for payment trends
+- **Advanced Filtering**: Filter by status, category, and date range
+- **Powerful Search**: Search across vendor names, invoice numbers, and categories
+- **Bulk Operations**: Select multiple bills for batch approval or payment
+- **Sortable Columns**: Click column headers to sort by any field
+- **CSV Export**: Download filtered bill data for reporting
+- **Status Badges**: Color-coded badges for quick status identification
+
+### ➕ Add New Bill
+- **Multi-Step Wizard**: Intuitive 3-step flow (Method → Details → Review)
+- **Dual Input Methods**: Upload invoice file (PDF/Image) or manual entry
+- **Form Validation**: Real-time validation with helpful error messages
+- **Vendor Management**: Autocomplete suggestions for existing vendors
+- **Recurring Bills**: Schedule recurring bills with frequency options
+- **Priority Levels**: Assign Low, Medium, or High priority to bills
+- **Category Selection**: Choose from predefined spending categories
+- **Payment Methods**: Support for Credit Card, Bank Transfer, Cash, and Check
+
+### 🔍 Bill Details
+- **Tabbed Interface**: Separate tabs for Details and Activity tracking
+- **Complete Information**: View all bill details including vendor info and amounts
+- **Approval Workflow**: Approve or reject bills with mandatory comments
+- **Comment System**: Collaborate with team members through comments
+- **Activity Timeline**: Full audit log of all actions taken on the bill
+- **Quick Actions**: Fast access to approve, reject, or pay actions
+- **Status History**: Track status changes over time
+
+### 💳 Payment Flow
+- **4-Step Process**: Method → Schedule → Confirm → Success
+- **Payment Methods**: ACH Transfer, Wire Transfer, Credit Card, Debit Card
+- **Payment Scheduling**: Option to pay now or schedule for future date
+- **Fee Calculation**: Transparent display of processing fees
+- **Processing Animation**: Visual feedback during payment processing
+- **Success Confirmation**: Transaction ID and receipt download option
+- **Secure Processing**: Payment data handled securely
+
+### 📈 Analytics & Reporting
+- **Spending Breakdown**: Visualize spending by category
+- **Status Distribution**: See bills by status at a glance
+- **Payment Trends**: Track payment patterns over time
+- **Export Functionality**: Download data for external analysis
+
+## 🛠 Tech Stack
+
+### Core Framework
+- **Next.js 16.0.10** - React framework with App Router and Turbopack
+- **React 19.2.0** - UI library with latest features
+- **TypeScript 5** - Type-safe development
+
+### Styling & UI
+- **Tailwind CSS 4.1.9** - Utility-first CSS framework
+- **Radix UI** - Accessible component primitives
+- **Headless UI 2.2.9** - Unstyled, accessible components
+- **Lucide React** - Beautiful icon library
+
+### Data Visualization
+- **Recharts 2.15.4** - Composable charting library
+
+### Additional Libraries
+- **Sonner** - Toast notifications
+- **date-fns** - Date utility functions
+- **clsx** - Conditional className utility
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm, yarn, or pnpm package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd my-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+
+### Build for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Build the application
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+my-app/
+├── app/                          # Next.js App Router
+│   ├── globals.css              # Global styles and CSS variables
+│   ├── layout.tsx               # Root layout with metadata
+│   └── page.tsx                 # Main page with state management
+│
+├── components/                   # React components
+│   ├── add-bill-modal.tsx       # Multi-step bill creation modal
+│   ├── assignment-documentation.tsx  # Assignment details page
+│   ├── bill-details-modal.tsx   # Bill details with approval workflow
+│   ├── bills-dashboard.tsx      # Main dashboard with charts & table
+│   ├── payment-flow-modal.tsx   # Payment processing flow
+│   └── ui/                      # Reusable UI components
+│       ├── button.tsx
+│       └── card.tsx
+│
+├── lib/                         # Utilities and type definitions
+│   ├── types.ts                 # TypeScript types and utilities
+│   └── utils.ts                 # Helper functions
+│
+└── public/                      # Static assets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+## 🔑 Key Components
 
-To learn more about Next.js, take a look at the following resources:
+### `bills-dashboard.tsx`
+The main dashboard component featuring:
+- Summary statistics cards
+- Interactive data visualizations (Recharts)
+- Filterable and searchable bills table
+- Bulk action controls
+- Export functionality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Key State:**
+- `bills`: Array of bill objects
+- `selectedBills`: Set of selected bill IDs
+- `filters`: Current filter state (status, category, date range)
+- `searchQuery`: Current search term
+- `sortConfig`: Column sorting configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### `add-bill-modal.tsx`
+Multi-step modal for creating new bills:
+- **Step 1**: Choose upload method (File/Manual)
+- **Step 2**: Enter bill details with validation
+- **Step 3**: Review and confirm
 
-## Deploy on Vercel
+**Features:**
+- Real-time form validation
+- Recurring bill scheduling
+- Priority assignment
+- Category selection
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### `bill-details-modal.tsx`
+Detailed view with approval workflow:
+- **Details Tab**: Complete bill information
+- **Activity Tab**: Timeline of all actions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Actions:**
+- Approve with comments
+- Reject with mandatory reason
+- Add comments for collaboration
+- View full activity history
+
+### `payment-flow-modal.tsx`
+4-step payment processing:
+1. **Select Payment Method**: Choose from available methods
+2. **Schedule Payment**: Pay now or schedule for later
+3. **Confirm Details**: Review payment information
+4. **Success**: View transaction confirmation
+
+**Features:**
+- Fee calculation
+- Payment scheduling
+- Processing animation
+- Receipt generation
+
+### `lib/types.ts`
+Centralized type definitions:
+```typescript
+// Core types
+interface Bill {
+  id: string;
+  vendor: string;
+  invoiceNumber: string;
+  amount: number;
+  dueDate: string;
+  status: BillStatus;
+  category: string;
+  priority: 'low' | 'medium' | 'high';
+  recurring: boolean;
+  // ... more fields
+}
+
+// Utility functions
+getStatusColor(status: BillStatus): string
+formatCurrency(amount: number): string
+formatDate(date: string): string
+isOverdue(dueDate: string): boolean
+```
+
+## 📖 Usage Guide
+
+### Adding a New Bill
+
+1. Click the **"Add Bill"** button in the dashboard
+2. Choose input method (Upload Invoice or Manual Entry)
+3. Fill in bill details:
+   - Vendor information
+   - Amount and due date
+   - Category and payment method
+   - Toggle recurring if needed
+4. Review your entries
+5. Click **"Add Bill"** to submit
+
+### Approving Bills
+
+1. Click on a bill row to open details
+2. Review the bill information
+3. Click **"Approve"** and add optional comment
+4. Or click **"Reject"** with mandatory reason
+
+### Making Payments
+
+1. Select bills to pay (checkbox or single bill)
+2. Click **"Pay Selected"** or individual pay button
+3. Choose payment method
+4. Select payment timing (now or scheduled)
+5. Confirm details
+6. View success confirmation
+
+### Using Filters
+
+- **Status Filter**: Click status dropdown to filter by Pending, Approved, Paid, etc.
+- **Category Filter**: Select spending category from dropdown
+- **Date Range**: Click date range selector to filter by due date
+- **Search**: Type in search box to find bills by vendor, invoice, or category
+- **Clear Filters**: Click "Clear Filters" to reset all filters
+
+### Bulk Operations
+
+1. Select multiple bills using checkboxes
+2. Use bulk action buttons:
+   - **Bulk Approve**: Approve all selected bills
+   - **Bulk Pay**: Process payment for all selected bills
+3. Confirm the action
+
+### Exporting Data
+
+1. Apply desired filters and search
+2. Click **"Export to CSV"** button
+3. CSV file downloads with filtered bill data
+
+## 📝 Assignment Details
+
+This project was built as a **Product Design Intern Assignment** for PaySprint, demonstrating:
+
+### 1. Problem Understanding
+- Identified pain points of small business bill management
+- Defined primary users (Finance Managers, Business Owners, Accounting Teams)
+- Mapped user goals and success criteria
+
+### 2. User Flow
+- End-to-end journey from bill upload to payment
+- Approval workflow integration
+- Status tracking and notifications
+
+### 3. Wireframes
+- Bills Dashboard layout
+- Add New Bill multi-step form
+- Bill Details with approval interface
+- Payment Flow screens
+
+### 4. High-Fidelity Implementation
+- Production-ready React components
+- Professional fintech design system
+- Responsive layouts for all screen sizes
+- Accessible UI components
+- Interactive data visualizations
+
+View the complete assignment documentation by navigating to the **"Assignment Documentation"** page in the application.
+
+## 💻 Development
+
+### Available Scripts
+
+```bash
+# Development
+npm run dev          # Start dev server with Turbopack
+
+# Production
+npm run build        # Build for production
+npm start            # Start production server
+
+# Code Quality
+npm run lint         # Run ESLint
+```
+
+### Code Structure Guidelines
+
+- **Components**: Use functional components with TypeScript
+- **State Management**: React hooks (useState, useCallback, useMemo)
+- **Styling**: Tailwind CSS utility classes
+- **Type Safety**: Comprehensive TypeScript types in `lib/types.ts`
+- **Notifications**: Sonner toast for user feedback
+
+### Adding New Features
+
+1. Define types in `lib/types.ts`
+2. Create component in `components/`
+3. Add necessary state to `app/page.tsx`
+4. Implement handlers and callbacks
+5. Add toast notifications for actions
+6. Update documentation
+
+### Dark Mode
+
+The application supports dark mode through CSS variables defined in `app/globals.css`:
+- Light theme: Default
+- Dark theme: Uses `@media (prefers-color-scheme: dark)`
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Blue tones for primary actions
+- **Success**: Green for approved/paid states
+- **Warning**: Amber for pending/overdue
+- **Danger**: Red for rejected/critical
+- **Neutral**: Gray scale for text and backgrounds
+
+### Typography
+- **Font**: Geist Sans (sans-serif)
+- **Mono**: Geist Mono (monospace)
+- **Sizes**: Responsive text sizing with Tailwind
+
+### Components
+- Consistent spacing using Tailwind scale
+- Rounded corners (rounded-lg, rounded-xl)
+- Shadows for elevation (shadow-sm, shadow-lg)
+- Smooth transitions (transition-all, transition-shadow)
+
+## 📄 License
+
+This project is part of a design assignment and is for demonstration purposes.
+
+## 🙏 Acknowledgments
+
+- **Next.js** team for the amazing framework
+- **Tailwind CSS** for the utility-first CSS approach
+- **Recharts** for beautiful data visualizations
+- **Radix UI** for accessible component primitives
+
+---
+
+**Built with ❤️ for PaySprint Assignment**#   P a y S p r i n t - b i l l - p a y m e n t - d a s h b o a r d  
+ 
