@@ -4,10 +4,10 @@ A comprehensive bill payment management system designed for small businesses, fe
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
+- Overview
+- Features
+- Tech Stack
+- Getting Started
 - [Project Structure](#project-structure)
 - [Key Components](#key-components)
 - [Usage Guide](#usage-guide)
@@ -407,5 +407,6 @@ This project is part of a design assignment and is for demonstration purposes.
 
 ---
 
-**Built with ❤️ for PaySprint Assignment**#   P a y S p r i n t - b i l l - p a y m e n t - d a s h b o a r d  
+**Built with ❤️ for PaySprint Assignment**#   P a y S p r i n t - b i l l - p a y m e n t - d a s h b o a r d 
+ 
  
