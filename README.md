@@ -8,11 +8,11 @@ A comprehensive bill payment management system designed for small businesses, fe
 - Features
 - Tech Stack
 - Getting Started
-- [Project Structure](#project-structure)
-- [Key Components](#key-components)
-- [Usage Guide](#usage-guide)
-- [Assignment Details](#assignment-details)
-- [Development](#development)
+- Project Structure
+- Key Components
+- Usage Guide
+- Assignment Details
+- Development
 
 ## 🎯 Overview
 
@@ -150,33 +150,6 @@ npm run build
 npm start
 ```
 
-## 📁 Project Structure
-
-```
-my-app/
-├── app/                          # Next.js App Router
-│   ├── globals.css              # Global styles and CSS variables
-│   ├── layout.tsx               # Root layout with metadata
-│   └── page.tsx                 # Main page with state management
-│
-├── components/                   # React components
-│   ├── add-bill-modal.tsx       # Multi-step bill creation modal
-│   ├── assignment-documentation.tsx  # Assignment details page
-│   ├── bill-details-modal.tsx   # Bill details with approval workflow
-│   ├── bills-dashboard.tsx      # Main dashboard with charts & table
-│   ├── payment-flow-modal.tsx   # Payment processing flow
-│   └── ui/                      # Reusable UI components
-│       ├── button.tsx
-│       └── card.tsx
-│
-├── lib/                         # Utilities and type definitions
-│   ├── types.ts                 # TypeScript types and utilities
-│   └── utils.ts                 # Helper functions
-│
-└── public/                      # Static assets
-
-```
-
 ## 🔑 Key Components
 
 ### `bills-dashboard.tsx`
@@ -229,30 +202,6 @@ Detailed view with approval workflow:
 - Payment scheduling
 - Processing animation
 - Receipt generation
-
-### `lib/types.ts`
-Centralized type definitions:
-```typescript
-// Core types
-interface Bill {
-  id: string;
-  vendor: string;
-  invoiceNumber: string;
-  amount: number;
-  dueDate: string;
-  status: BillStatus;
-  category: string;
-  priority: 'low' | 'medium' | 'high';
-  recurring: boolean;
-  // ... more fields
-}
-
-// Utility functions
-getStatusColor(status: BillStatus): string
-formatCurrency(amount: number): string
-formatDate(date: string): string
-isOverdue(dueDate: string): boolean
-```
 
 ## 📖 Usage Guide
 
@@ -332,67 +281,6 @@ This project was built as a **Product Design Intern Assignment** for PaySprint, 
 - Responsive layouts for all screen sizes
 - Accessible UI components
 - Interactive data visualizations
-
-View the complete assignment documentation by navigating to the **"Assignment Documentation"** page in the application.
-
-## 💻 Development
-
-### Available Scripts
-
-```bash
-# Development
-npm run dev          # Start dev server with Turbopack
-
-# Production
-npm run build        # Build for production
-npm start            # Start production server
-
-# Code Quality
-npm run lint         # Run ESLint
-```
-
-### Code Structure Guidelines
-
-- **Components**: Use functional components with TypeScript
-- **State Management**: React hooks (useState, useCallback, useMemo)
-- **Styling**: Tailwind CSS utility classes
-- **Type Safety**: Comprehensive TypeScript types in `lib/types.ts`
-- **Notifications**: Sonner toast for user feedback
-
-### Adding New Features
-
-1. Define types in `lib/types.ts`
-2. Create component in `components/`
-3. Add necessary state to `app/page.tsx`
-4. Implement handlers and callbacks
-5. Add toast notifications for actions
-6. Update documentation
-
-### Dark Mode
-
-The application supports dark mode through CSS variables defined in `app/globals.css`:
-- Light theme: Default
-- Dark theme: Uses `@media (prefers-color-scheme: dark)`
-
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Blue tones for primary actions
-- **Success**: Green for approved/paid states
-- **Warning**: Amber for pending/overdue
-- **Danger**: Red for rejected/critical
-- **Neutral**: Gray scale for text and backgrounds
-
-### Typography
-- **Font**: Geist Sans (sans-serif)
-- **Mono**: Geist Mono (monospace)
-- **Sizes**: Responsive text sizing with Tailwind
-
-### Components
-- Consistent spacing using Tailwind scale
-- Rounded corners (rounded-lg, rounded-xl)
-- Shadows for elevation (shadow-sm, shadow-lg)
-- Smooth transitions (transition-all, transition-shadow)
 
 ## 📄 License
 
