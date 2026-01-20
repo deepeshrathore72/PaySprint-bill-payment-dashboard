@@ -4,15 +4,15 @@ A comprehensive bill payment management system designed for small businesses, fe
 
 ## 📋 Table of Contents
 
-- Overview
-- Features
-- Tech Stack
-- Getting Started
-- Project Structure
-- Key Components
-- Usage Guide
-- Assignment Details
-- Development
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Key Components](#key-components)
+- [Usage Guide](#usage-guide)
+- [Assignment Details](#assignment-details)
+- [Development](#development)
 
 ## 🎯 Overview
 
@@ -123,35 +123,35 @@ A comprehensive bill payment system that offers:
 ### Installation
 
 1. **Clone the repository**
-   
-   ```bash
-   git clone <repository-url>
-   cd my-app
-   ```
 
-3. **Install dependencies**
-   
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
+```bash
+git clone <repository-url>
+cd my-app
+```
 
-5. **Run the development server**
-   
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   ```
+2. **Install dependencies**
 
-7. **Open your browser**
-   
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. **Run the development server**
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+
+4. **Open your browser**
+
+Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
 ### Build for Production
 
@@ -161,6 +161,26 @@ npm run build
 
 # Start production server
 npm start
+```
+
+## 📁 Project Structure
+
+```
+my-app/
+├── app/
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Main page with bill management logic
+│   └── globals.css         # Global styles and Tailwind imports
+├── components/
+│   ├── bills-dashboard.tsx      # Main dashboard with filters & charts
+│   ├── add-bill-modal.tsx       # Multi-step bill creation modal
+│   ├── bill-details-modal.tsx   # Bill details with approval workflow
+│   ├── payment-flow-modal.tsx   # Payment processing flow
+│   └── documentation.tsx        # Assignment documentation
+├── lib/
+│   ├── types.ts            # TypeScript type definitions
+│   └── utils.ts            # Utility functions
+└── public/                 # Static assets
 ```
 
 ## 🔑 Key Components
@@ -176,7 +196,6 @@ The main dashboard component featuring:
 - Export functionality
 
 **Key State:**
-
 - `bills`: Array of bill objects
 - `selectedBills`: Set of selected bill IDs
 - `filters`: Current filter state (status, category, date range)
@@ -192,7 +211,6 @@ Multi-step modal for creating new bills:
 - **Step 3**: Review and confirm
 
 **Features:**
-
 - Real-time form validation
 - Recurring bill scheduling
 - Priority assignment
@@ -203,10 +221,9 @@ Multi-step modal for creating new bills:
 Detailed view with approval workflow:
 
 - **Details Tab**: Complete bill information
-- **Activity Tab**: Timeline of all actions
+- **Activity Tab**: Timeline of all actions taken
 
 **Actions:**
-
 - Approve with comments
 - Reject with mandatory reason
 - Add comments for collaboration
@@ -222,7 +239,6 @@ Detailed view with approval workflow:
 4. **Success**: View transaction confirmation
 
 **Features:**
-
 - Fee calculation
 - Payment scheduling
 - Processing animation
@@ -235,14 +251,12 @@ Detailed view with approval workflow:
 1. Click the **"Add Bill"** button in the dashboard
 2. Choose input method (Upload Invoice or Manual Entry)
 3. Fill in bill details:
-
    - Vendor information
    - Amount and due date
    - Category and payment method
    - Toggle recurring if needed
-
-5. Review your entries
-6. Click **"Add Bill"** to submit
+4. Review your entries
+5. Click **"Add Bill"** to submit
 
 ### Approving Bills
 
@@ -313,6 +327,45 @@ This project was built as a **Product Design Intern Assignment** for PaySprint, 
 - Accessible UI components
 - Interactive data visualizations
 
+## 🚧 Development
+
+### Available Scripts
+
+```bash
+# Development server
+npm run dev
+
+# Production build
+npm run build
+
+# Start production server
+npm start
+
+# Lint code
+npm run lint
+```
+
+### Design System
+
+**Colors:**
+- Primary: Blue (#3b82f6)
+- Success: Green (#22c55e)
+- Warning: Orange (#f59e0b)
+- Danger: Red (#ef4444)
+- Neutral: Gray scale
+
+**Typography:**
+- Font Family: Inter, system-ui
+- Headings: Bold, various sizes
+- Body: Regular, 14-16px
+
+### Code Style
+
+- TypeScript for type safety
+- Functional components with hooks
+- Tailwind CSS for styling
+- Component composition over inheritance
+
 ## 📄 License
 
 This project is part of a design assignment and is for demonstration purposes.
@@ -326,6 +379,4 @@ This project is part of a design assignment and is for demonstration purposes.
 
 ---
 
-**Built with ❤️ for PaySprint Assignment**#   P a y S p r i n t - b i l l - p a y m e n t - d a s h b o a r d 
- 
- 
+**Built with ❤️ for PaySprint Assignment**
