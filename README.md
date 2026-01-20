@@ -30,6 +30,7 @@ Small businesses often struggle with:
 ### Solution
 
 A comprehensive bill payment system that offers:
+
 - ✅ Centralized bill management dashboard
 - ✅ Streamlined approval workflows with activity logs
 - ✅ Real-time status tracking and notifications
@@ -39,6 +40,7 @@ A comprehensive bill payment system that offers:
 ## ✨ Features
 
 ### 📊 Bills Dashboard
+
 - **Overview Statistics**: Visual metrics showing total, pending, overdue, and paid bills
 - **Interactive Charts**: Pie chart for status breakdown, bar chart for category spending, line chart for payment trends
 - **Advanced Filtering**: Filter by status, category, and date range
@@ -49,6 +51,7 @@ A comprehensive bill payment system that offers:
 - **Status Badges**: Color-coded badges for quick status identification
 
 ### ➕ Add New Bill
+
 - **Multi-Step Wizard**: Intuitive 3-step flow (Method → Details → Review)
 - **Dual Input Methods**: Upload invoice file (PDF/Image) or manual entry
 - **Form Validation**: Real-time validation with helpful error messages
@@ -59,6 +62,7 @@ A comprehensive bill payment system that offers:
 - **Payment Methods**: Support for Credit Card, Bank Transfer, Cash, and Check
 
 ### 🔍 Bill Details
+
 - **Tabbed Interface**: Separate tabs for Details and Activity tracking
 - **Complete Information**: View all bill details including vendor info and amounts
 - **Approval Workflow**: Approve or reject bills with mandatory comments
@@ -68,6 +72,7 @@ A comprehensive bill payment system that offers:
 - **Status History**: Track status changes over time
 
 ### 💳 Payment Flow
+
 - **4-Step Process**: Method → Schedule → Confirm → Success
 - **Payment Methods**: ACH Transfer, Wire Transfer, Credit Card, Debit Card
 - **Payment Scheduling**: Option to pay now or schedule for future date
@@ -77,6 +82,7 @@ A comprehensive bill payment system that offers:
 - **Secure Processing**: Payment data handled securely
 
 ### 📈 Analytics & Reporting
+
 - **Spending Breakdown**: Visualize spending by category
 - **Status Distribution**: See bills by status at a glance
 - **Payment Trends**: Track payment patterns over time
@@ -85,20 +91,24 @@ A comprehensive bill payment system that offers:
 ## 🛠 Tech Stack
 
 ### Core Framework
+
 - **Next.js 16.0.10** - React framework with App Router and Turbopack
 - **React 19.2.0** - UI library with latest features
 - **TypeScript 5** - Type-safe development
 
 ### Styling & UI
+
 - **Tailwind CSS 4.1.9** - Utility-first CSS framework
 - **Radix UI** - Accessible component primitives
 - **Headless UI 2.2.9** - Unstyled, accessible components
 - **Lucide React** - Beautiful icon library
 
 ### Data Visualization
+
 - **Recharts 2.15.4** - Composable charting library
 
 ### Additional Libraries
+
 - **Sonner** - Toast notifications
 - **date-fns** - Date utility functions
 - **clsx** - Conditional className utility
@@ -113,12 +123,14 @@ A comprehensive bill payment system that offers:
 ### Installation
 
 1. **Clone the repository**
+   
    ```bash
    git clone <repository-url>
    cd my-app
    ```
 
-2. **Install dependencies**
+3. **Install dependencies**
+   
    ```bash
    npm install
    # or
@@ -127,7 +139,8 @@ A comprehensive bill payment system that offers:
    pnpm install
    ```
 
-3. **Run the development server**
+5. **Run the development server**
+   
    ```bash
    npm run dev
    # or
@@ -136,7 +149,7 @@ A comprehensive bill payment system that offers:
    pnpm dev
    ```
 
-4. **Open your browser**
+7. **Open your browser**
    
    Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
@@ -153,7 +166,9 @@ npm start
 ## 🔑 Key Components
 
 ### `bills-dashboard.tsx`
+
 The main dashboard component featuring:
+
 - Summary statistics cards
 - Interactive data visualizations (Recharts)
 - Filterable and searchable bills table
@@ -161,6 +176,7 @@ The main dashboard component featuring:
 - Export functionality
 
 **Key State:**
+
 - `bills`: Array of bill objects
 - `selectedBills`: Set of selected bill IDs
 - `filters`: Current filter state (status, category, date range)
@@ -168,36 +184,45 @@ The main dashboard component featuring:
 - `sortConfig`: Column sorting configuration
 
 ### `add-bill-modal.tsx`
+
 Multi-step modal for creating new bills:
+
 - **Step 1**: Choose upload method (File/Manual)
 - **Step 2**: Enter bill details with validation
 - **Step 3**: Review and confirm
 
 **Features:**
+
 - Real-time form validation
 - Recurring bill scheduling
 - Priority assignment
 - Category selection
 
 ### `bill-details-modal.tsx`
+
 Detailed view with approval workflow:
+
 - **Details Tab**: Complete bill information
 - **Activity Tab**: Timeline of all actions
 
 **Actions:**
+
 - Approve with comments
 - Reject with mandatory reason
 - Add comments for collaboration
 - View full activity history
 
 ### `payment-flow-modal.tsx`
+
 4-step payment processing:
+
 1. **Select Payment Method**: Choose from available methods
 2. **Schedule Payment**: Pay now or schedule for later
 3. **Confirm Details**: Review payment information
 4. **Success**: View transaction confirmation
 
 **Features:**
+
 - Fee calculation
 - Payment scheduling
 - Processing animation
@@ -210,12 +235,14 @@ Detailed view with approval workflow:
 1. Click the **"Add Bill"** button in the dashboard
 2. Choose input method (Upload Invoice or Manual Entry)
 3. Fill in bill details:
+
    - Vendor information
    - Amount and due date
    - Category and payment method
    - Toggle recurring if needed
-4. Review your entries
-5. Click **"Add Bill"** to submit
+
+5. Review your entries
+6. Click **"Add Bill"** to submit
 
 ### Approving Bills
 
@@ -260,22 +287,26 @@ Detailed view with approval workflow:
 This project was built as a **Product Design Intern Assignment** for PaySprint, demonstrating:
 
 ### 1. Problem Understanding
+
 - Identified pain points of small business bill management
 - Defined primary users (Finance Managers, Business Owners, Accounting Teams)
 - Mapped user goals and success criteria
 
 ### 2. User Flow
+
 - End-to-end journey from bill upload to payment
 - Approval workflow integration
 - Status tracking and notifications
 
 ### 3. Wireframes
+
 - Bills Dashboard layout
 - Add New Bill multi-step form
 - Bill Details with approval interface
 - Payment Flow screens
 
 ### 4. High-Fidelity Implementation
+
 - Production-ready React components
 - Professional fintech design system
 - Responsive layouts for all screen sizes
